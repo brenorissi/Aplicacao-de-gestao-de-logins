@@ -177,7 +177,8 @@ public class SecondWin extends JFrame {
     }
 
     private void salvarDadosS(String email, String senha) {
-        try (FileWriter saveSteam = new FileWriter("steam.txt", true); BufferedWriter bw = new BufferedWriter(saveSteam)) {
+        String caminho = System.getProperty("user.home") + "/Documents/steam.txt";
+        try (FileWriter saveSteam = new FileWriter(caminho, true); BufferedWriter bw = new BufferedWriter(saveSteam)) {
             bw.write("E-mail/usuário: " + email + ", " + "Senha: " + senha);
             bw.newLine();
             JOptionPane.showMessageDialog(this, "Dados salvos com sucesso!");
@@ -187,8 +188,9 @@ public class SecondWin extends JFrame {
     }
 
     private String[] carregarDadosS() {
+        String caminho = System.getProperty("user.home") + "/Documents/steam.txt";
         StringBuilder dados = new StringBuilder();
-        try (BufferedReader reader = new BufferedReader(new FileReader("steam.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(caminho))) {
             String linha;
             while ((linha = reader.readLine()) != null) {
                 dados.append(linha).append("\n");
@@ -201,7 +203,8 @@ public class SecondWin extends JFrame {
     }
 
     private void salvarDadosN(String email, String senha) {
-        try (FileWriter saveNexus = new FileWriter("nexus.txt", true); BufferedWriter bw = new BufferedWriter(saveNexus)) {
+        String caminho = System.getProperty("user.home") + "/Documents/nexus.txt";
+        try (FileWriter saveNexus = new FileWriter(caminho, true); BufferedWriter bw = new BufferedWriter(saveNexus)) {
             bw.write("E-mail/usuário: " + email + ", " + "Senha: " + senha);
             bw.newLine();
             JOptionPane.showMessageDialog(this, "Dados salvos com sucesso!");
@@ -211,8 +214,9 @@ public class SecondWin extends JFrame {
     }
 
     private String[] carregarDadosN() {
+        String caminho = System.getProperty("user.home") + "/Documents/nexus.txt";
         StringBuilder dados = new StringBuilder();
-        try (BufferedReader reader = new BufferedReader(new FileReader("nexus.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(caminho))) {
             String linha;
             while ((linha = reader.readLine()) != null) {
                 dados.append(linha).append("\n");
@@ -225,7 +229,8 @@ public class SecondWin extends JFrame {
     }
 
     private void salvarDadosD(String email, String senha) {
-        try (FileWriter saveDisney = new FileWriter("disney.txt", true); BufferedWriter bw = new BufferedWriter(saveDisney)) {
+        String caminho = System.getProperty("user.home") + "/Documents/disney.txt";
+        try (FileWriter saveDisney = new FileWriter(caminho, true); BufferedWriter bw = new BufferedWriter(saveDisney)) {
             bw.write("E-mail/usuário: " + email + ", " + "Senha: " + senha);
             bw.newLine();
             JOptionPane.showMessageDialog(this, "Dados salvos com sucesso!");
@@ -235,8 +240,9 @@ public class SecondWin extends JFrame {
     }
 
     private String[] carregarDadosD() {
+        String caminho = System.getProperty("user.home") + "/Documents/disney.txt";
         StringBuilder dados = new StringBuilder();
-        try (BufferedReader reader = new BufferedReader(new FileReader("disney.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(caminho))) {
             String linha;
             while ((linha = reader.readLine()) != null) {
                 dados.append(linha).append("\n");
@@ -249,7 +255,8 @@ public class SecondWin extends JFrame {
     }
 
     private void salvarDadosP(String email, String senha) {
-        try (FileWriter savePrime = new FileWriter("prime.txt", true); BufferedWriter bw = new BufferedWriter(savePrime)) {
+        String caminho = System.getProperty("user.home") + "/Documents/prime.txt";
+        try (FileWriter savePrime = new FileWriter(caminho, true); BufferedWriter bw = new BufferedWriter(savePrime)) {
             bw.write("E-mail/usuário: " + email + ", " + "Senha: " + senha);
             bw.newLine();
             JOptionPane.showMessageDialog(this, "Dados salvos com sucesso!");
@@ -259,8 +266,9 @@ public class SecondWin extends JFrame {
     }
 
     private String[] carregarDadosP() {
+        String caminho = System.getProperty("user.home") + "/Documents/prime.txt";
         StringBuilder dados = new StringBuilder();
-        try (BufferedReader reader = new BufferedReader(new FileReader("prime.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(caminho))) {
             String linha;
             while ((linha = reader.readLine()) != null) {
                 dados.append(linha).append("\n");
@@ -273,7 +281,8 @@ public class SecondWin extends JFrame {
     }
 
     private void salvarDadosG(String email, String senha) {
-        try (FileWriter saveGoogle = new FileWriter("google.txt", true); BufferedWriter bw = new BufferedWriter(saveGoogle)) {
+        String caminho = System.getProperty("user.home") + "/Documents/google.txt";
+        try (FileWriter saveGoogle = new FileWriter(caminho, true); BufferedWriter bw = new BufferedWriter(saveGoogle)) {
             bw.write("E-mail/usuário: " + email + ", " + "Senha: " + senha);
             bw.newLine();
             JOptionPane.showMessageDialog(this, "Dados salvos com sucesso!");
@@ -283,8 +292,9 @@ public class SecondWin extends JFrame {
     }
 
     private String[] carregarDadosG() {
+        String caminho = System.getProperty("user.home") + "/Documents/google.txt";
         StringBuilder dados = new StringBuilder();
-        try (BufferedReader reader = new BufferedReader(new FileReader("google.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(caminho))) {
             String linha;
             while ((linha = reader.readLine()) != null) {
                 dados.append(linha).append("\n");
@@ -297,7 +307,8 @@ public class SecondWin extends JFrame {
     }
 
     private void salvarDadosT(String email, String senha) {
-        try (FileWriter saveTwitch = new FileWriter("twitch.txt", true); BufferedWriter bw = new BufferedWriter(saveTwitch)) {
+        String caminho = System.getProperty("user.home") + "/Documents/twitch.txt";
+        try (FileWriter saveTwitch = new FileWriter(caminho, true); BufferedWriter bw = new BufferedWriter(saveTwitch)) {
             bw.write("E-mail/usuário: " + email + ", " + "Senha: " + senha);
             bw.newLine();
             JOptionPane.showMessageDialog(this, "Dados salvos com sucesso!");
@@ -307,8 +318,9 @@ public class SecondWin extends JFrame {
     }
 
     private String[] carregarDadosT() {
+        String caminho = System.getProperty("user.home") + "/Documents/twitch.txt";
         StringBuilder dados = new StringBuilder();
-        try (BufferedReader reader = new BufferedReader(new FileReader("twitch.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(caminho))) {
             String linha;
             while ((linha = reader.readLine()) != null) {
                 dados.append(linha).append("\n");
