@@ -105,7 +105,7 @@ public class SecondWin extends JFrame {
     }
 
     public void adicionarActionD() {
-        this.saveN.addActionListener(new ActionListener() {
+        this.saveD.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 salvarDadosD(eu.getText(), new String(sen.getText()));
