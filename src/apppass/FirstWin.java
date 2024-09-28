@@ -4,13 +4,17 @@
  */
 package apppass;
 
+import java.awt.*;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
+import javax.swing.border.LineBorder;
 
 /**
  *
@@ -21,16 +25,19 @@ public class FirstWin extends JFrame {
     private JButton steam, nexus, disney, prime, google, twitch;
 
     public void criarComponentes() {
+        getContentPane().setBackground(Color.BLACK);
         setTitle("PassApp");
         setSize(1440, 720);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
         setLocationRelativeTo(null);
         setLayout(null);
-
-        JLabel t1 = new JLabel("Selecione um:");
-        t1.setBounds(520, 30, 300, 100);
-        t1.setFont(new Font("Arial", Font.BOLD, 40));
+        
+        ImageIcon img1 = new ImageIcon(getClass().getResource("/image/senha.png"));
+        Image imagem = img1.getImage().getScaledInstance(180, 110, Image.SCALE_SMOOTH);
+        ImageIcon img2 = new ImageIcon(imagem);
+        JLabel img = new JLabel(img2);
+        img.setBounds(510, 30, 300, 150);
 
         JLabel t2 = new JLabel("Criado por: Breno Rissi Fernandes!");
         t2.setBounds(1240, 640, 200, 50);
@@ -59,8 +66,43 @@ public class FirstWin extends JFrame {
         twitch = new JButton("Twitch");
         twitch.setBounds(800, 290, 200, 50);
         twitch.setFont(new Font("Arial", Font.BOLD, 20));
-
-        this.add(t1);
+        
+        steam.setBackground(new Color(64, 64, 64));
+        steam.setForeground(new Color(255, 255, 255));
+        steam.setFocusPainted(false);
+        steam.setBorder(new LineBorder(new Color(32, 32, 32)));
+        
+        nexus.setBackground(new Color(64, 64, 64));
+        nexus.setForeground(new Color(255, 255, 255));
+        nexus.setFocusPainted(false);
+        nexus.setBorder(new LineBorder(new Color(32, 32, 32)));
+        
+        prime.setBackground(new Color(64, 64, 64));
+        prime.setForeground(new Color(255, 255, 255));
+        prime.setFocusPainted(false);
+        prime.setBorder(new LineBorder(new Color(32, 32, 32)));
+        
+        disney.setBackground(new Color(64, 64, 64));
+        disney.setForeground(new Color(255, 255, 255));
+        disney.setFocusPainted(false);
+        disney.setBorder(new LineBorder(new Color(32, 32, 32)));
+        
+        nexus.setBackground(new Color(64, 64, 64));
+        nexus.setForeground(new Color(255, 255, 255));
+        nexus.setFocusPainted(false);
+        nexus.setBorder(new LineBorder(new Color(32, 32, 32)));
+        
+        google.setBackground(new Color(64, 64, 64));
+        google.setForeground(new Color(255, 255, 255));
+        google.setFocusPainted(false);
+        google.setBorder(new LineBorder(new Color(32, 32, 32)));
+        
+        twitch.setBackground(new Color(64, 64, 64));
+        twitch.setForeground(new Color(255, 255, 255));
+        twitch.setFocusPainted(false);
+        twitch.setBorder(new LineBorder(new Color(32, 32, 32)));
+        
+        this.add(img);
         this.add(t2);
         this.add(steam);
         this.add(nexus);
